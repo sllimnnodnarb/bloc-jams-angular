@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-.album-cover-art {
-=======
+
 body.album {
      background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
      background-repeat: no-repeat;
@@ -11,7 +9,6 @@ body.album {
  }
  
  .album-cover-art {
->>>>>>> checkpoint2
      position: relative;
      left: 20%;
      margin-top: 1rem;
@@ -49,7 +46,6 @@ body.album {
  
  .album-view-song-item {
      height: 3rem;
-     /* #1 */
      border-bottom: 1px solid rgba(255,255,255,0.5);
  }
  
@@ -97,7 +93,6 @@ body.album {
      }
  }
  
- /* #3 */
  @media (max-width: 1024px) and (min-width: 320px) {
     .album-view-song-list {
          position: relative;
