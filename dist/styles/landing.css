@@ -10,6 +10,7 @@
      background-position: center center;
      background-size: cover;
  }
+
 .hero-content .hero-title {
      position: absolute;             
      top: 40%;                       
@@ -48,8 +49,8 @@
  }
 
 .ion-music-note,
- .ion-radio-waves,
- .ion-iphone {
+.ion-radio-waves,
+.ion-iphone {
      color: rgb(233,50,117);
      font-size: 5rem;
  }
