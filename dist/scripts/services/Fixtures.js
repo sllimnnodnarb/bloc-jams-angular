@@ -9,11 +9,11 @@
             year: '1881',
             albumArtUrl: '../assets/images/album_covers/01.png',
             songs: [
-                { title: 'Blue', duration: '161.71', audioUrl: '/assets/music/bloc_jams_music/alabama' },
-                { title: 'Green', duration: '103.96', audioUrl: '/assets/music/bloc_jams_music/money' },
-                { title: 'Red', duration: '268.45', audioUrl: '/assets/music/bloc_jams_music/music' },
-                { title: 'Pink', duration: '153.14', audioUrl: '/assets/music/bloc_jams_music/queen' },
-                { title: 'Magenta', duration: '374.22', audioUrl: '/assets/music/bloc_jams_music/alive' }
+                { title: 'Sweet Home Alabama', duration: '161.71', audioUrl: '/assets/music/bloc_jams_music/alabama' },
+                { title: 'Money for Nothin', duration: '103.96', audioUrl: '/assets/music/bloc_jams_music/money' },
+                { title: 'You Got The Music in You' , duration: '268.45', audioUrl: '/assets/music/bloc_jams_music/music' },
+                { title: 'We Will Rock You', duration: '153.14', audioUrl: '/assets/music/bloc_jams_music/queen' },
+                { title: 'Stayin Alive', duration: '374.22', audioUrl: '/assets/music/bloc_jams_music/alive' }
             ]
         };
  
