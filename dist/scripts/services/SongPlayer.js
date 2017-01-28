@@ -30,8 +30,22 @@
                 formats: ['mp3'],
                 preload: true
             });
-
-             SongPlayer.currentSong = song;
+            
+            currentBuzzObject.bind('timeupdate', function() {
+                $rootScope.$apply(function() {
+                    SongPlayer.currentTime = currentBuzzObject.getTime();
+                });
+            });
+            /**
+            * @desc current Buzz object audio file
+            * @type {Object}
+            */
+            SongPlayer.currentSong = song;
+            /**
+            * @desc current time in seconds of current song
+            * @type {number}
+            */
+            SongPlayer.currentTime = null;
          };         
          /**
          * @function playsong
@@ -64,8 +78,6 @@
          * @desc if currentSong is not the song, it makes it so, then plays the song, and sets playing to true.  otherwise, if the song is the song, then the song is in the paused state, and gets played
          * @param {object} song
          */       
-         
-        
          SongPlayer.play = function(song) {
                 song = song || SongPlayer.currentSong;
                 if (SongPlayer.currentSong !== song) {
@@ -122,7 +134,14 @@
                 var song = SongPlayer.currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
-            }    
+            }
+             
+            SongPlayer.setCurrentTime = function(time) {
+                if (currentBuzzObject) {
+                    currentBuzzObject.setTime(time);
+                }
+            };
+             
          };
                    
          /**

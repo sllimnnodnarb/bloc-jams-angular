@@ -84,7 +84,8 @@ html {
 .column {
     float: left;
     padding-left: 1rem;
-    padding-right: 1rem; 
+    padding-right: 1rem;
+    overflow: hidden;
      }
      
      .column.full { width: 100%; }
@@ -95,10 +96,13 @@ html {
      .column.flow-opposite { float: right; }  
 }
 
- 
+
+
+
  @media (min-width: 1024px) {
     html { font-size: 120%; }
  }
+
 
 .clearfix::before,
 .clearfix::after {

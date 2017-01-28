@@ -42,6 +42,8 @@
     opacity: 1;
     background-color: white;
     color: rgb(233,50,117);
+    overflow: hidden;
+    height: 400px;
 }
 
  .point .point-title {
