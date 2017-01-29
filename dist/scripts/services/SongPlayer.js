@@ -21,7 +21,6 @@
                 currentBuzzObject.stop();
                 SongPlayer.currentSong.playing = null;
             }
-        
             /**
             * @desc curent Buzz object audio file
             * @type {Object}
@@ -31,22 +30,21 @@
                 preload: true
             });
             
+           
+            
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
                 });
             });
+            
+            
             /**
             * @desc current Buzz object audio file
             * @type {Object}
             */
             SongPlayer.currentSong = song;
-            /**
-            * @desc current time in seconds of current song
-            * @type {number}
-            */
-            SongPlayer.currentTime = null;
-         };         
+        };         
          /**
          * @function playsong
          * @desc plays the current buzz object
@@ -67,13 +65,14 @@
          };
         
          SongPlayer.currentAlbum = Fixtures.getAlbum();
-         /**
-         * @desc the current playing song
-         * @type {Object}
-         */
-         SongPlayer.currentSong = null;    
          
-        /**
+         SongPlayer.currentSong = null;  
+        
+         SongPlayer.currentTime = null;
+        
+         SongPlayer.volume = 50;
+         
+         /**
          * @function SongPlayer.play
          * @desc if currentSong is not the song, it makes it so, then plays the song, and sets playing to true.  otherwise, if the song is the song, then the song is in the paused state, and gets played
          * @param {object} song
@@ -88,7 +87,6 @@
                     playSong(song);
                 }
             }
-
          };        
          /**
          * @function SongPlayer.pause
@@ -134,26 +132,30 @@
                 var song = SongPlayer.currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
-            }
-             
-            SongPlayer.setCurrentTime = function(time) {
-                if (currentBuzzObject) {
-                    currentBuzzObject.setTime(time);
-                }
-            };
-             
+            } 
          };
-                   
+        
+         SongPlayer.setCurrentTime = function(time) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setTime(time);
+            }
+         };
+            
+         SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+         };
          /**
          * @function stopSong
          * @desc stops current buzz object and sets the song.playing to null
          * @param 
          */   
-         var stopSong = function() {
+         var stopSong = function(song) {
             currentBuzzObject.stop();
             song.playing = null;
          };
-                
+        
          return SongPlayer;           
     };
 
