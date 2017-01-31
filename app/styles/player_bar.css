@@ -214,3 +214,8 @@
     color: rgb(210, 40, 123);
     transform: translateX(15px);
 }
+
+.ion-android-volume-off:hover {
+    cursor: pointer;
+    color: rgb(210, 40, 123);
+}
